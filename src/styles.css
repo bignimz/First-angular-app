@@ -12,13 +12,7 @@ body {
 } */
 
 .goals-wrapper {
-      max-width: 600px;
-      width: 100%;
-      border: 2px solid #333;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
       margin-top: 50px;
       padding: 20px;
       border-radius: 10px;
@@ -37,7 +31,8 @@ body {
       font-weight: bold;
 }
 
-.goal-item {
+.goals-wrapper li {
       font-size: 20px;
       margin-bottom: 20px;
+      list-style: none;
 }

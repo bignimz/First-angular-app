@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="fluid-container">
+    <div class="goals-wrapper shadow">
+      <h1>My Goals</h1>
+      <hr />
+
+      <div class="row">
+        <div class="col-md-6">
+          <div *ngFor="let goal of goals; let i = index">
+            <div>
+              <h4 id="{{ i }}" appStrikethrough>
+                {{ goal.name }} due on
+                {{ goal.completeDate | date | uppercase }}
+              </h4>
+              <button (click)="toggleDetails(i)" class="btn btn-outline-info">
+                Toggle Details
+              </button>
+            </div>
+
+            <div *ngIf="goal.showDescription">
+              <app-goal-detail
+                [goal]="goal"
+                (isComplete)="deleteGoal($event, i)"
+              ></app-goal-detail>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <app-goal-form></app-goal-form>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <p>My Goals for today are:</p>
+        <ul>
+          <div *ngFor="let goal of goals; let i = index">
+            <li appStrikethrough>
+              {{ goal.name }} due on {{ goal.completeDate | date | uppercase }}
+            </li>
+            <button (click)="toggleDetails(i)">Toggle Details</button>
+            <app-goal-detail
+              *ngIf="goal.showDescription"
+              [goal]="goal"
+              (isComplete)="deleteGoal($event, i)"
+            ></app-goal-detail>
+          </div>
+        </ul>
+      </div> -->
+
+      <p class="alert alert-info py-3" *ngIf="goals.length > 10">
+        Your goals are too many
+      </p>
+    </div>
+  </div>
+</div>

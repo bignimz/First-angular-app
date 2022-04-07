@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Goal } from './goal';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Goals';
-  goals:string[];
+  
 
   constructor() {
-    this.goals = ['Watch finding nemo', 'Buy cookies', 'Get new phone case']
+    
   }
 }
