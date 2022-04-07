@@ -12,7 +12,6 @@ body {
 } */
 
 .goals-wrapper {
-
       margin-top: 50px;
       padding: 20px;
       border-radius: 10px;
@@ -20,7 +19,42 @@ body {
       text-align: center;
 }
 
-.goals-wrapper h2 {
+.left-col {
+      max-height: 500px;
+      padding: 20px;
+}
+
+.add-btn {
+      background-color: teal;
+      color: white;
+      padding: 15px 40px;
+      text-transform: uppercase;
+}
+
+/* CUSTOM SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: teal;
+      border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #027464;
+    }
+
+/* .goals-wrapper h2 {
       font-size: 36px;
       text-align: center;
       margin-bottom: 20px;
@@ -35,4 +69,4 @@ body {
       font-size: 20px;
       margin-bottom: 20px;
       list-style: none;
-}
+} */

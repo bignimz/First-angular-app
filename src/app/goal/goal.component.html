@@ -5,13 +5,16 @@
       <hr />
 
       <div class="row">
-        <div class="col-md-6">
-          <div *ngFor="let goal of goals; let i = index">
+        <div class="left-col text-white col-md-6 overflow-scroll">
+          <div
+            *ngFor="let goal of goals; let i = index"
+            class="card bg-dark my-3 py-4"
+          >
             <div>
-              <h4 id="{{ i }}" appStrikethrough>
+              <p id="{{ i }}" appStrikethrough>
                 {{ goal.name }} due on
                 {{ goal.completeDate | date | uppercase }}
-              </h4>
+              </p>
               <button (click)="toggleDetails(i)" class="btn btn-outline-info">
                 Toggle Details
               </button>
@@ -26,7 +29,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <app-goal-form></app-goal-form>
+          <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
         </div>
       </div>
       <!-- <div class="row">
