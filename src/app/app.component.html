@@ -1,9 +1,11 @@
-<div class="container">
-  <div class="goals-wrapper">
-    <h2>{{ title }}</h2>
-    <p>My Goal for today are:</p>
-    <ul>
-      <li class="goal-item" *ngFor="let goal of goals">{{ goal }}</li>
-    </ul>
+<div class="row">
+  <div class="container">
+    <div class="goals-wrapper">
+      <h2 class="text-1 text-info">{{ title }}</h2>
+      <p>My Goal for today are:</p>
+      <ul>
+        <li class="goal-item" *ngFor="let goal of goals">{{ goal }}</li>
+      </ul>
+    </div>
   </div>
 </div>
